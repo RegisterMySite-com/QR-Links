@@ -1,0 +1,25 @@
+# RegisterMySite
+
+> RegisterMySite is a web development agency that builds multi-platform online presence for businesses.
+
+RegisterMySite helps local and service-based businesses move from scattered listings to a professional, unified online presence.
+
+## Core Pages
+
+- [Homepage](https://registermysite.com/): Overview of services, how it works, and value proposition
+- [About](https://registermysite.com/about): Company background and service summary
+- [Templates & Tools](https://registermysite.com/templates): Industry-ready website templates
+- [Documentation](https://registermysite.com/docs): Step-by-step guide to domain search, registration, and setup
+- [API Reference](https://registermysite.com/api): Endpoints for authentication (Google/GitHub) and more
+
+## Services
+
+- [Domain & DNS Setup](https://registermysite.com/): Register or connect domains, configure DNS
+- [SEO Optimization](https://registermysite.com/): Technical SEO, schema markup, local SEO, and more
+- [Web Design & Templates](https://registermysite.com/templates): Responsive, mobile-first, conversion-focused designs
+- [Custom Business Email](https://registermysite.com/): Professional @yourbusiness.com addresses
+
+## Optional
+
+- [Domain Search Tool](https://registermysite.com/tools/Domain_Search): Check domain availability
+- [Contact / Start Project](https://registermysite.com/): Reach the team to begin a project
