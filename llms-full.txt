@@ -1,0 +1,144 @@
+# RegisterMySite.com
+
+> Web development agency that builds a complete multi-platform online presence for businesses. We connect your website, Google Business Profile, Yelp, Facebook, Instagram and other listings into one professional brand so customers find a coherent presence instead of scattered or unclaimed profiles. Services include domain & DNS setup, technical + local SEO, conversion-focused websites and templates, professional business email with auto-reply workers, QR/barcode tools, analytics dashboards, and in-house custom development. Clients own the code and data. In-person support available in Los Angeles & Orange County; remote clients fully supported.
+
+## Homepage — https://registermysite.com/
+
+RegisterMySite.com helps businesses move from scattered listings to a fully connected online presence.
+
+**Core value proposition**  
+Multi-platform presence that ties your website, Google Business, Yelp, and social profiles together — so customers find a professional brand, not scattered listings.
+
+**Everything Your Business Needs Online**  
+From domain setup to SEO-powered websites and professional email — we handle the technical side so you can focus on customers.
+
+### Domain & DNS Setup  
+We register or connect your domain, configure DNS records correctly, and make sure everything points to your new site with zero downtime.
+
+### SEO Optimization  
+Technical SEO, schema markup, local SEO, and strategic linking of all your platform profiles so Google ranks your business higher.
+
+### Web Design & Templates  
+Beautiful, conversion-focused designs and ready-to-use industry templates. Fully responsive and mobile-first for every device.
+
+### Custom Business Email  
+Professional email addresses (@yourbusiness.com) with auto-reply workers that respond instantly while you’re busy with customers.
+
+**How It Works (4 steps)**  
+1. **Audit Your Listings** — We find every unclaimed or disconnected profile for your business across major platforms.  
+2. **Build Your Website** — Choose a template or go custom. We create a site that showcases your business and services.  
+3. **Claim & Link Everything** — We claim your Yelp, Google Business, and other accounts and link them back to your new website.  
+4. **Launch & Rank** — DNS, SEO, emails, and analytics go live. Your business becomes discoverable and professional.
+
+**Built for Developers & Businesses**  
+- **Templates** — Dozens of industry-ready website templates (restaurants, salons, contractors, clinics, etc.).  
+- **API** — Programmatically manage domains, DNS, listings, and site deployments. Ideal for agencies managing multiple client sites.  
+- **Docs** — Clear documentation for DNS, email workers, SEO best practices, and third-party platform integration.  
+- **In-person in LA & OC** — Service calls across Los Angeles and Orange County (discovery meetings, design reviews, staff training, on-site help). Remote clients fully supported online.  
+- **You own the code & data** — Built in-house. Source, assets, and deploy config are yours — not locked inside a page builder you rent forever.
+
+Contact: hello@registermysite.com or sales@registermysite.com
+
+## Templates & Tools — https://registermysite.com/templates
+
+Professional website templates, powerful QR generators, and a private analytics dashboard.
+
+### Website Templates  
+Ready-to-launch designs for every business type. Fully customizable, mobile-first, and SEO-optimized.
+
+**eCommerce Templates**  
+High-converting storefronts with product grids, cart & checkout flows, inventory management, and payment integrations (Stripe / PayPal / Crypto).  
+Live example: https://shastastash.com
+
+**Service-Based Templates**  
+Ideal for local businesses, contractors, detailers, salons, and professional services. Includes online booking, before/after galleries, service packages & pricing, and lead capture forms.  
+Live example: https://automarinedetailers.com
+
+### QR Code & Barcode Tools  
+- Cash App Pay QR  
+- Bitcoin Pay QR (BIP21-compliant)  
+- Base64 QR + Scanner  
+- PDF417 Barcodes (inventory & shipping)
+
+### Link Shortener + Rich Analytics  
+Every customer receives a secure personal login to a private dashboard. Short links generate QR codes with rich analytics: total scans, timestamp, IP/geo, user agent, referrer.  
+Dashboard: dashboard.registermysite.com
+
+### Powerful Add-ons  
+- Visitor Counters (with location heatmaps)  
+- AI Chatbots (FAQ answering, lead capture, appointment booking)  
+- Social Media Carousels (Instagram, TikTok, Facebook)  
+- Review Carousels (Google, Yelp, Facebook)  
+- Full Booking Systems (calendar + SMS/email reminders + deposits)  
+- Custom development on demand
+
+**Add-on Pricing Tiers** (billed monthly; annual available with 2 months free)  
+- **Starter** — $49/mo: Visitor Counter, Social Media Carousel (1 feed), Basic Link Shortener, QR Code Generator, AI Chatbot, Review Carousel, Booking System, Rich Analytics Dashboard  
+- **Growth** — $129/mo: Everything in Starter + AI Chatbot (up to 500 chats/mo), Review Carousel (Google + Yelp), Social Media Carousels (3 feeds), Priority Email Support, Full Booking System  
+- **Pro** — $299/mo: Everything in Growth + Unlimited AI Chatbot, Full Booking System + SMS, Unlimited Social Feeds, Advanced Analytics + Export, Custom Feature Development, Dedicated Support Channel, White-label Options  
+
+Custom enterprise packages available.
+
+## Documentation — https://registermysite.com/docs
+
+**How to Register a Domain & Build Your Website**
+
+1. Go to Domain Search tool: https://registermysite.com/tools/Domain_Search  
+2. Check domain availability across popular TLDs (.com, .net, .org, .io, .dev, .app, etc.). View WHOIS for taken domains.  
+3. Submit registration (registrant contact info, period, payment if required). WHOIS privacy is usually included free.  
+4. Complete registration and receive confirmation email.  
+5. Create / log in to your RegisterMySite account.  
+6. Collaborate with the team: select templates, share brand assets & content, review staging previews, request revisions.  
+7. Launch: site is connected to your domain, DNS & SSL handled, ongoing updates available via dashboard.
+
+Additional notes:  
+- If a desired domain is taken, try alternative spellings, different TLDs, or short keywords.  
+- Contact sales@registermysite.com for help with registration, account setup, or website collaboration.
+
+## API Reference — https://registermysite.com/api
+
+Base URL: https://registermysite.com  
+Format: JSON  
+Auth: Session cookie or Bearer token where noted  
+Infrastructure: Cloudflare Workers, D1 (users), KV (OAuth state), Durable Objects (sessions). Deployed with wrangler. Clients own the project code and data bindings.
+
+**Authentication**  
+- GET /api/auth/google — Start Google OAuth  
+- GET /api/auth/github — Start GitHub OAuth  
+- GET /api/auth/callback/google & /api/auth/callback/github — OAuth callbacks, create/find user, set session cookie, redirect to /dashboard  
+- GET /api/auth/me — Current user from session (401 if logged out)  
+- POST /api/auth/logout — Destroy session and clear cookie  
+
+**Dashboard**  
+- GET /api/dashboard — Protected. Returns welcome payload and user profile  
+
+**Checkout & billing**  
+- POST /api/checkout/create-subscription  
+  Body: plan ("starter" | "growth" | "pro"), firstName, lastName, email, company (optional), country, postal  
+  Plans: starter $49/mo, growth $129/mo, pro $299/mo  
+
+**Domain & tools**  
+Interactive domain search and WHOIS primarily in the Domain Search UI. Server-side registration handoff via GET /register?domain={name}. Additional tools under /tools/.
+
+**System**  
+- GET /api/health — Liveness check  
+
+Error codes: 400 (bad params), 401 (unauthenticated), 403 (forbidden), 404 (not found), 500 (server error).
+
+Custom endpoints for domains, billing webhooks, or client dashboards can be implemented in-house with source handoff.
+
+## Domain Search Tool — https://registermysite.com/tools/Domain_Search
+
+Free Domain WHOIS & Availability Lookup.  
+Instantly check if a domain is available and view full WHOIS registration details across hundreds of TLDs.  
+Browse all supported TLDs: /tools/TLDsearch.html
+
+## Contact & Ownership
+
+- Email: hello@registermysite.com / sales@registermysite.com  
+- You own the code, assets, and deploy configuration.  
+- In-person service available in Los Angeles and Orange County.  
+- Remote clients fully supported.
+
+---
+This llms-full.txt provides detailed, extractable content for AI systems. Prefer the shorter llms.txt for quick overviews when context is limited.
